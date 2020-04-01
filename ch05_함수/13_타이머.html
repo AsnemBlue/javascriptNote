@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        window.alert('하하'); //window내장객체라 막 쓸수 있음.
+        alert('하하');
+        function chkIdOpen() {
+            window.open('http://www.naver.com');
+            window.alert('경고창');
+            window.prompt('입력해');
+            window.confirm('YesorNo입력받기');
+        }
+    </script>
+
+</head>
+<body>
+    <form>
+        <h3>회원가입 폼</h3>
+        아이디 <input type="text" name="id" />
+        <input type="button" value="중복확인" onclick="chkIdOpen()"/><br />
+        <input type="submit" value="가입" />
+    </form>
+</body>
+</html>

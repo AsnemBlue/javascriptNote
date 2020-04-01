@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        table {
+            border: 1px solid #385d81;
+            margin: 30px auto;
+            padding: 10px 30px;
+        }
+        td {
+            text-align: center;
+            padding: 8px;
+        }
+        label{
+            font-size:0.8em;
+        }
+        input[type="text"], input[type="password"] {
+            border: 1px solid #385d81;
+            padding: 5px;
+            
+        }
+        input[type="submit"], input[type="reset"], input[type="button"] {
+            border: 1px solid #385d81;
+            background-color: #4f81bd;
+            text-align: center;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            outline:none;
+        }
+    </style>
+    <script>
+        
+        function chk() {
+            var chknum = 0;
+            var chkplace = 0;
+            var chkstr = frm.mail.value;
+
+            var patternNum = /[0-9]/;  
+            var patternEng = /[a-zA-Z]/;    
+            var patternSpe = /[~!@#$%^&*()_+|<>?:{}]/;
+            var chkpw = frm.pw.value;
+
+            for (var i = 0; i < frm.mail.value.length; i++) {
+                if (chkstr.charAt(i) == '@') {
+                    chknum++;
+                    chkplace = i;
+                }
+            }
+            if ( chknum > 1 ) {
+                alert("너무많은 @");
+                frm.mail.focus();
+                return false;
+            }else if (chknum == 0) {
+                alert("메일에 '@'가 포함 되어야 합니다.");
+                frm.mail.focus();
+                return false;
+            }else if (chkplace == 0 || chkplace == (frm.mail.value.length-1)) {
+                alert("'@'의 위치가 올바르지 않습니다.");
+                frm.mail.focus();
+                return false;
+            }else if (frm.pw.value.length < 4) {
+                alert("비밀번호는 4글자 이상이어야 합니다.");
+                frm.pw.focus();
+                return false;
+            } else if (!patternNum.test(chkpw) || !patternEng.test(chkpw) || !patternSpe.test(chkpw)) {
+                alert("비밀번호는 특수문자,숫자,알파벳이 모두 포함되어야 합니다.");
+                frm.pw.focus();
+                return false;
+            }else if (frm.pwchk.value !=frm.pw.value) {
+                alert("비밀번호가 서로 일치하지 않습니다.");
+                frm.pwchk.focus();
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <form action="#" method="get" onsubmit="return chk()" name="frm">
+        <table>
+            <tr>
+                <td>
+                    <label for="mail">메일 </label>
+                </td>
+                <td>
+                    <input type="text" name="mail" placeholder="메일형식에 맞추세요"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="pw">비밀번호 </label>
+                </td>
+                <td>
+                    <input type="password" name="pw" placeholder="특수문자,알파벳,숫자 포함"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="pwchk">비밀번호 </label>
+                </td>
+                <td>
+                    <input type="password" name="pwchk" placeholder="4글자 이상" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" value="회원가입" />
+                    <input type="reset" value="취소" />
+                    <input type="button" value="로그인" />
+                </td>
+            </tr>
+        </table>
+
+    </form>
+</body>
+</html>

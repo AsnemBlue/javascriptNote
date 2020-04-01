@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function openWindow() {
+            var child = open('1_window객체속성및메소드.html', 'childWin', 'width=300,height=200');
+            if (!child) {
+                alert('팝업차단을 해제 해주세요');
+            }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="openWindow()">새창열기 버튼</button>
+    <hr />
+    <a href="http://www.daum.net" target="childWin">새창을 다음으로 가기</a>
+</body>
+</html>

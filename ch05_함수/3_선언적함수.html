@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        fun();//선언적 함수는 먼저 선언 실행
+        //funVar(); 이 시점에선 실행 불가. 선언x
+        function fun() {
+            alert('선언적 함수 호출됨');
+        };
+        var funVar = function () { alert('익명함수'); };
+        fun();
+        funVar();
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        table{
+            background-color:#1d60d8;
+        }
+        td{
+            width:100px; height:100px;
+            background-color:white;
+            text-align:center;
+        }
+    </style>
+    <script>
+        var toggle = 0;
+        var num1 = -1;
+        var num2 = -1;
+        window.onkeydown = function () {
+            var num = event.keyCode;
+            var numbers = document.getElementsByTagName('td');
+            if (num == 83) {
+                toggle = 1;
+            }
+            if (toggle == 0) {
+                return false;
+            }
+            
+            if (num == 37) {
+                    numbers[num1].style.backgroundColor = 'white';
+                if (num1 % 3 != 0) {
+                    num1 = num1 - 1;
+                } else {
+                    num1 = num1 + 2;
+                }
+                numbers[num1].style.backgroundColor = 'yellow';
+            }
+            if (num == 39) {
+                    numbers[num1].style.backgroundColor = 'white';
+                if ((num1 % 3) != 2) {
+                    num1 = num1 + 1;
+                } else {
+                    num1 = num1 - 2;
+                }
+                numbers[num1].style.backgroundColor = 'yellow';
+            }
+            if (num == 38) {
+                    numbers[num1].style.backgroundColor = 'white';
+                if (num1 > 2) {
+                    num1 = num1 - 3;
+                } else {
+                    num1 = num1 + 6;
+                }
+                numbers[num1].style.backgroundColor = 'yellow';
+            }
+            if (num == 40) {
+                    numbers[num1].style.backgroundColor = 'white';
+                if (num1 < 6) {
+                    num1 = num1 + 3;
+                } else {
+                    num1 = num1 - 6;
+                }
+                numbers[num1].style.backgroundColor = 'yellow';
+            }
+            if (num > 95 && num < 105) {
+                num1 = num - 96;
+                for (var i = 0; i < 9; i++) {
+                    if (numbers[i].style.backgroundColor == 'red') {
+                        continue;
+                    }
+                    numbers[i].style.backgroundColor = 'white';
+                }
+                numbers[num1].style.backgroundColor = 'yellow';
+            } else if (num > 47 && num < 57) {
+                num2 = num - 48;
+                for (var i = 0; i < 9; i++) {
+                    if (numbers[i].style.backgroundColor == 'yellow') {
+                        continue;
+                    }
+                    numbers[i].style.backgroundColor = 'white';
+                }
+                numbers[num2].style.backgroundColor = 'red';
+            }
+        };
+        
+    </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+        </tr>
+    </table>
+</body>
+</html>

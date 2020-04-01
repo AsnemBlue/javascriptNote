@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var person = {
+            name: '윤인성',
+            age: 35,
+            eat: function (food) {
+                alert(this.name+'은 ' + food + '를 먹는다.');
+            }
+        };
+        document.write(person.name + ' ' + person['age']);
+        person.eat('덮밥');
+        document.write(person);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

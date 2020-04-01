@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        window.onload = function () {
+            var clock = this.document.getElementsByClassName('clock');//배열로 처리됨, 하나라도.
+            clock[0].innerHTML = '날짜:'+new Date().toDateString();
+            clock[1].value = '시간:' + new Date().toTimeString();
+            clock[1].style.fontsize = '2em';    //보통 정적인것은 css에서
+            this.setInterval(function () {
+                clock[1].value = '시간: ' + new Date().toLocaleTimeString();
+            }, 1000);
+        };
+    </script>
+</head>
+<body>
+    <h1 class="clock"></h1>
+    <input type="text" class="clock" size="35"/>
+</body>
+</html>

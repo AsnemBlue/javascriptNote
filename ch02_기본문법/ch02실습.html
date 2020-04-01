@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function chk() {
+            if (frm.name.value.length < 2) {
+                alert("이름 2글자 이상이어야 합니다.");
+                frm.name.focus();
+                return false;
+            } else if (parseInt(frm.age.value) < 0 || parseInt(frm.age.value) > 120 || isNaN(parseInt(frm.age.value))) {
+                alert("나이는 0~120까지");
+                frm.age.focus();
+                return false;
+            } else if (!frm.add.value) {
+                alert("주소를 입력하셔야 합니다.");
+                frm.pw.value = "";
+                frm.pwchk.value = "";
+                frm.add.focus();
+                return false;
+            }
+            return true;
+        }
+    </script>
+    <style>
+        *{
+            font-size:1em;
+        }
+        fieldset{
+            border:2px solid #385d8a;
+        }
+        input[type="text"]{
+            border:2px solid #385d8a;
+            text-align:center;
+        }
+        p {
+            text-align:center;
+        }
+    </style>
+</head>
+<body>
+    <form action="#" onsubmit="return chk()" name="frm">
+        <p>
+            <label for="name">이름 </label>
+            <input type="text" name="name" id="name" 
+                   required="required" autofocus="autofocus" 
+                   placeholder="이름은 2글자 이상"/>
+        </p>
+        <p>
+            <label for="age">나이 </label>
+            <input type="text" name="age" id="age" 
+                   required="required" 
+                   placeholder="나이는 0~120까지" />
+        </p>
+        <p>
+            <label for="add">주소 </label>
+            <input type="text" name="add" id="add" 
+                   required="required" 
+                   placeholder="주소는 입력만"/>
+        </p>
+        <br />
+        <p><input type="submit" id="ok" value="입 력" /></p>
+    </form>
+</body>
+</html>

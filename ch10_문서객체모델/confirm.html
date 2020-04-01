@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        span{
+            border:1px solid lightgray;
+            padding:2px;
+            cursor:pointer;
+        }
+        #wrap{
+            text-align:center;
+            width:300px; height:100px;
+            margin:0 auto;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            document.getElementById('id').value = opener.document.getElementById('id').value;
+        }
+        function send() {
+            opener.document.getElementById('id').value = document.getElementById('id').value;
+            window.close();
+        }
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        ID<input type="text" id="id" />
+        <span id="overlap" onclick="chk()">체크</span>
+        <p><span onclick="send()">아이디사용</span></p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var chknum = 0;
+        var id = setInterval(function () {
+                    document.write(new Date()+(chknum+1)+'번째 <br>');
+            switch (chknum % 3) {
+                case 0:
+                    document.body.style.backgroundImage = 'url("보노1.jfif")';
+                    break;
+                case 1:
+                    document.body.style.backgroundImage = 'url("보노2.jfif")';
+                    break;
+                case 2:
+                    document.body.style.backgroundImage = 'url("보노3.jfif")';
+                    break;
+            }
+            document.body.style.backgroundSize = '50%';
+            
+            chknum++;
+        }, 1000);
+
+        setTimeout(function () { clearInterval(id); }, 10000);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

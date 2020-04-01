@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="interval.js"></script>
+    <script>
+       
+        var today = new Date();
+        var before = new Date(2020, 0, 1, 10, 0, 0); // 2020년 1월 1일 오전 10시 0분 0초
+        var intervalDay = today.getInterval(before);
+
+        /*var intervalMilli = today.getTime() - before.getTime();
+        var intervalDay = Math.floor(intervalMilli / (1000 * 60 * 60 * 24));*/
+        document.write(intervalDay);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

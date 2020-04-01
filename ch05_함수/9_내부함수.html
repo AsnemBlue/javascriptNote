@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        /* A씨 만든 js 부분 */
+        function pythagoras(width, height) {
+        function square(x) { return x * x; }//충돌막기위해 내부로~
+            return Math.sqrt(square(width) + square(height));
+        }
+
+        function square(width, height, hyphotenuse) {
+            if (width * width + height * height == hyphotenuse) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        document.write(pythagoras(3, 4));
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        /* data에는 날짜를 window load시 한번 뿌리고 
+         * time에는 1초에 한번 시간을 뿌려라*/
+        window.onload = function () {
+            var bono = ['../1.jfif','../2.jfif','../3.jfif']
+            var img = this.document.createElement('img');
+            var date = this.document.getElementById('date');
+            var time = this.document.getElementById('time');
+            date.innerHTML = new Date().toLocaleDateString();
+            var toggle = 0;
+            setInterval(function () {
+                time.innerHTML = new Date().toLocaleTimeString();
+                img.setAttribute('src', bono[toggle]);
+                document.body.appendChild(img);
+                toggle++;
+                if (toggle == 3) {
+                    toggle = 0;
+                }
+            }, 1000);
+        };
+    </script>
+</head>
+<body>
+    날짜 : <h2 id="date"></h2>
+    시간 : <h2 id="time"></h2>
+</body>
+</html>

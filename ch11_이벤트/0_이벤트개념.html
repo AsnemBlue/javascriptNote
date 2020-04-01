@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        window.onload = function () {
+            var header = this.document.getElementById('header');
+            var p = this.document.getElementsByTagName('p')[0];
+            function whenClick() {
+                alert('click');
+            }
+            header.onclick = whenClick;
+            //이벤트이름 : Click
+            //이벤트 속성변수:inclick
+            //이벤트 리스너 : whenClick
+            for (var key in header) {
+                p.innerHTML += key + ':' + header[key] + '<br>';
+            }
+
+        };
+    </script>
+</head>
+<body>
+    <h1 id="header">Click</h1>
+</body>
+</html>

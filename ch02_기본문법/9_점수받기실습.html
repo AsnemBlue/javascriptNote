@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var sum;
+        do {
+            var kor = prompt('국어점수를 입력하세요(0~100)');
+            kor = parseInt(kor);
+            if (kor <= 100 && kor >= 0) {
+                sum = kor;
+                break;
+            }
+            alert('잘못된 값을 입력하셨습니다.');
+        } while (true)
+        do {
+            var eng = prompt('영어점수를 입력하세요(0~100)');
+            eng = parseInt(eng);
+            if (eng <= 100 && eng >= 0) {
+                sum += eng;
+                break;
+            }
+            alert('잘못된 값을 입력하셨습니다.');
+        } while (true)
+        document.write('합계는 ' + sum + '점 입니다.');
+    </script>
+</head>
+<body>
+
+</body>
+</html>

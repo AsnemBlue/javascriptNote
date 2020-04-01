@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var primitiveNumber = 273;
+        var objectNumber = new Number(273); //자바와 달리 둘다 객체변수로 주소참조함.--> 모든 변수가 객체변수.
+        document.write(primitiveNumber.toString()+ '<br>');
+        document.write(typeof (primitiveNumber) + '<br>');
+        document.write(typeof (objectNumber) + '<br>');
+        //constructor: 생성자 함수
+        document.write(primitiveNumber.constructor + '<br>');
+        document.write(objectNumber.constructor + '<br>');
+        //Number 객체에 method추가
+        Number.prototype.method1 = function () { alert('Number'); };
+        primitiveNumber.method1();
+        objectNumber.method1();
+        objectNumber.method2 = function () { alert('objectNumber only'); };
+        objectNumber.method2();
+        //primitiveNumber.method2(); 실행불가
+        primitiveNumber.method3 = function () { alert('되나보자'); };
+        //primitiveNumber.method3(); 타입이 object가 아니라 속성 추가가 불가.
+    </script>
+</head>
+<body>
+
+</body>
+</html>

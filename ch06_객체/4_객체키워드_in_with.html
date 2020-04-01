@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var student = {
+            name: '홍길동',
+            kor: 92,
+            mat: 100,
+            eng: 100,
+            sci: 97,
+            output: '객체안의 output'
+        };
+        var output = '';
+        with (student) {
+            window.output += '이름: ' + name + '<br>';
+            window.output += '국어: ' + kor + '<br>';
+            window.output += '수학: ' + mat + '<br>';
+            window.output += '영어: ' + eng + '<br>';
+            window.output += '과학: ' + sci + '<br>';
+            window.output += 'output: ' + output + '<br>';
+        }
+        document.write(output);
+        document.write('name' in student); //student객체 안에 name속성이 있으면 true
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var chknum = 0;
+        window.onload = function () {
+            var h1 = this.document.querySelector('h1');
+            h1.onclick = function () {
+                this.style.color = 'red';
+                chknum++;
+                h1.innerHTML = '';
+                for (var i = 0; i < chknum; i++) {
+                    h1.innerHTML += '♡';
+                }
+                h1.innerHTML += '좋아요';
+                if (chknum == 5) {
+                    h1.onclick = null;
+                }
+            };
+        };
+    </script>
+</head>
+<body>
+    <h1>좋아요</h1>
+</body>
+</html>

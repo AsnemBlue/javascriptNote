@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        #wrap{
+            border:2px solid #0094ff;
+            width: 300px;
+            margin:0 auto;
+            padding:10px;
+        }
+    </style>
+    <script>
+        var page = ['http://www.naver.com', 'http://www.daum.net', 'http://www.google.com', 'http://www.yahoo.com'];
+        function change(n) {
+            location.href = page[n];
+        }
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <h2>메뉴</h2>
+        <button onclick="change(0)">네이버</button>
+        <button onclick="change(1)">다음</button>
+        <button onclick="change(2)">구글</button>
+        <button onclick="change(3)">야후</button>
+    </div>
+
+</body>
+</html>

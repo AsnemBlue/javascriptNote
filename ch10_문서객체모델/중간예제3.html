@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        #wrap{
+            margin:0 auto;
+            width:750px;
+        }
+        td{
+            height:300px;
+            width:100px;
+        }
+        td:nth-child(1){ background-color:red;}
+        td:nth-child(2){ background-color:orange;}
+        td:nth-child(3){ background-color:yellow;}
+        td:nth-child(4){ background-color:green;}
+        td:nth-child(5){ background-color:blue;}
+        td:nth-child(6){ background-color:navy;}
+        td:nth-child(7){ background-color:purple;}
+    </style>
+    <script>
+        var color = ['white', 'red', 'orange', 'yellow', 'green', 'blue', 'navy', 'purple'];
+        function change(n) {
+            if (n == 0) {
+                h1 = document.getElementsByTagName('h1');
+                document.body.removeChild(h1[0]);
+            } else {
+                var h1 = document.createElement('h1');
+                var textNode = document.createTextNode('야호 목요일이다');
+                h1.appendChild(textNode);
+                document.body.appendChild(h1);
+                h1.style.color = color[n];
+            }
+        };
+
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <table>
+            <tr onmouseout="change(0)">
+                <td onmouseover="change(1)" ></td>
+                <td onmouseover="change(2)" ></td>
+                <td onmouseover="change(3)" ></td>
+                <td onmouseover="change(4)" ></td>
+                <td onmouseover="change(5)" ></td>
+                <td onmouseover="change(6)" ></td>
+                <td onmouseover="change(7)" ></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

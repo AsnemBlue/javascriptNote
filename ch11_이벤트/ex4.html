@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function ov(n) {
+            var imgs = document.querySelectorAll('img');
+            var string = 'img/'+n + 'over.jpg';
+            imgs[n].setAttribute('src', string);
+        };
+        function out(n) {
+            var imgs = document.querySelectorAll('img');
+            var string = 'img/'+n + 'out.jpg';
+            imgs[n].setAttribute('src', string);
+        };
+    </script>
+</head>
+<body>
+    <img src="img/0out.jpg" onmouseover="ov(0)" onmouseout="out(0)" />
+    <img src="img/1out.jpg" onmouseover="ov(1)" onmouseout="out(1)" />
+    <img src="img/2out.jpg" onmouseover="ov(2)" onmouseout="out(2)" />
+    <img src="img/3out.jpg" onmouseover="ov(3)" onmouseout="out(3)" />
+</body>
+</html>

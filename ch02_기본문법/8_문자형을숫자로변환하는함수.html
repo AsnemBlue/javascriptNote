@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var str = '100점';
+        var i = Number(str);
+        document.write('str=' + str + ' - str의 type : ' + typeof (str) + '<br>');
+        document.write('i=' + i + ' - i의 type : ' + typeof (i) + '<br>');
+        document.write('<h2>parseInt함수이용</h2>')
+        var str = 'a';
+        var i = parseInt(str);
+        document.write('str=' + str + ' - str의 type : ' + typeof (str) + '<br>');
+        document.write('i=' + i + ' - i의 type : ' + typeof (i) + '<br>');
+        if (isNaN(i)) {//i가 NaN이면 true, 아니면 false
+            document.write('수가 아니었네');
+        } else {
+            document.write('수였네');
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

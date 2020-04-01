@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        window.onload = function () {
+            var header1 = this.document.querySelector('.header'); // .header 첫번째 선택자 하나만
+            var headers = this.document.querySelectorAll('.header'); //All
+            header1.innerHTML = '바꿔';
+            for (var idx in headers) {
+                headers[idx].style.color = 'red';
+                headers[idx].style.backgroundColor = 'yellow';
+                // headers[idx].style.cssText = 'color:red; background-color:yellow;';
+            };
+        };
+    </script>
+</head>
+<body>
+    <h1 class="header">HEADER</h1>
+    <h1 class="header">HEADER</h1>
+</body>
+</html>

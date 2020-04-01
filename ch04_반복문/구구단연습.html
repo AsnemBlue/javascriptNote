@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        table{
+            width:700px;
+            margin:0 auto;
+            background-color:#1a70d9;
+        }
+        td{
+            height:30px;
+            line-height:30px;
+            text-align:center;
+            background-color:white;
+            font-size:0.8em;
+        }
+    </style>
+    <script>
+        do {
+            var goo = parseInt(prompt("보고싶은 구구단의 단수를 입력해 주세요"))
+            if (isNaN(goo) || (goo%1)!=0 ) {
+                alert('자연수를 입력해 주세요');
+                continue;
+            }
+            if (goo > 9 || goo < 1) {
+                alert('1~9의 자연수를 입력해 주세요');
+                continue;
+            }
+            break;
+        } while (true);
+        for (int = 1; int < 10; int++) {
+            document.write(goo + ' x ' + int + ' = ' + goo * int+'<br>');
+        }
+
+        document.write('<table>');
+        document.write('<caption> 2~9단표 </caption>');
+        for (var j = 1; j < 10; j++) {
+             document.write('<tr>');
+            for (var i = 2; i < 10; i++) {
+                document.write('<td>'+i + ' x ' + j + ' = ' + j * i+'</td>');
+            }
+            document.write('</tr>');
+        }
+        document.write('</table>');
+    </script>
+</head>
+<body>
+
+</body>
+</html>

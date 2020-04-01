@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        span{
+            border:1px solid lightgray;
+            padding:2px;
+            cursor:pointer;
+        }
+    </style>
+    <script>
+        function childOpen() {
+            var child = open('confirm.html', '중복체크', 'width=500, height=300, left=100, top=100');
+            if (!child) {
+                alert('팝업차단을 해제해 주세요');
+            }
+        }
+    </script>
+</head>
+<body>
+    아이디<input type="text" id="id" />
+    <span id="overlap" onclick="childOpen()">중복확인</span>
+</body>
+</html>

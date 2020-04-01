@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var id = setInterval(function () {
+            document.write(new Date() + '<br>');
+        }, 1000);//일정 시간마다
+
+        setTimeout(function () { clearInterval(id); }, 10000);
+        //clearInterval(id) : 셋팅된 setinterval()타이머 중지
+        //타이머는 줄에 상관없이 마지막에 실행.->for구문에 넣으면 마지막만 실행 됨.
+    </script>
+</head>
+<body>
+
+</body>
+</html>

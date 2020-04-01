@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var num = parseInt(prompt("학점을 입력하시오.(0~4.5)"))
+        if (isNaN(num)) {
+            alert("잘못된 값을 입력하셨습니다.");
+        } else if (num > 4.5 || num < 0) {
+            alert("잘못된 범위의 값입니다.")
+        } else if (num >= 4.0) {
+            alert("A학점이군요.")
+        } else if (num >= 3.0) {
+            alert("B학점이군요.")
+        } else if (num >= 2.0) {
+            alert("C학점이군요.")
+        } else {
+            alert("분발하세요.")
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
